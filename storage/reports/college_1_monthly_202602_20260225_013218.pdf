@@ -1,0 +1,29 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >> endobj
+4 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
+5 0 obj << /Length 586 >> stream
+BT /F1 12 Tf 50 800 Td (BS/001 Monthly Report) Tj ET
+BT /F1 12 Tf 50 784 Td (College ID: 1) Tj ET
+BT /F1 12 Tf 50 768 Td (Month: 2026-02) Tj ET
+BT /F1 12 Tf 50 752 Td (Created At: 2026-02-25T01:32:18.208322+00:00) Tj ET
+BT /F1 12 Tf 50 736 Td () Tj ET
+BT /F1 12 Tf 50 720 Td (Assessments: 65, Avg Score: 32.91931623931625) Tj ET
+BT /F1 12 Tf 50 704 Td (Risk Dist: low=34 medium=18 high=13) Tj ET
+BT /F1 12 Tf 50 688 Td (Alerts: 66, UnAck: 55, HighUnAck: 28) Tj ET
+BT /F1 12 Tf 50 672 Td (Interventions: 37, Done: 2) Tj ET
+BT /F1 12 Tf 50 656 Td (Questionnaires: 4, Responses: 65) Tj ET
+endstream endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+947
+%%EOF

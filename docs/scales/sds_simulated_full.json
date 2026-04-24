@@ -1,0 +1,177 @@
+{
+  "name": "SDS 结构化模拟量表（20题）",
+  "scale_type": "sds_sample",
+  "description": "结构化模拟题库（非版权原题），包含反向计分标记。",
+  "questions": [
+    {
+      "id": 1,
+      "text": "SDS模拟题01：我最近情绪低落的时间变多了。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2,
+      "text": "SDS模拟题02：我对曾经喜欢的事情兴趣下降。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4,
+      "reverse": true
+    },
+    {
+      "id": 3,
+      "text": "SDS模拟题03：我会觉得做事提不起精神。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 4,
+      "text": "SDS模拟题04：我常感到疲惫、动力不足。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 5,
+      "text": "SDS模拟题05：我会觉得自己价值感降低。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4,
+      "reverse": true
+    },
+    {
+      "id": 6,
+      "text": "SDS模拟题06：我对未来有时缺乏希望。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4,
+      "reverse": true
+    },
+    {
+      "id": 7,
+      "text": "SDS模拟题07：我在学习中容易感到无力。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 8,
+      "text": "SDS模拟题08：我比平时更想独处。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 9,
+      "text": "SDS模拟题09：我在社交中变得被动。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 10,
+      "text": "SDS模拟题10：我会出现持续性的消极想法。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 11,
+      "text": "SDS模拟题11：我最近做事效率明显下降。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4,
+      "reverse": true
+    },
+    {
+      "id": 12,
+      "text": "SDS模拟题12：我会因情绪问题影响作息。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4,
+      "reverse": true
+    },
+    {
+      "id": 13,
+      "text": "SDS模拟题13：我常觉得开心变得困难。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 14,
+      "text": "SDS模拟题14：我会否定自己的能力与表现。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4,
+      "reverse": true
+    },
+    {
+      "id": 15,
+      "text": "SDS模拟题15：我有时觉得生活缺少意义感。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 16,
+      "text": "SDS模拟题16：我面对压力时更容易沮丧。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4,
+      "reverse": true
+    },
+    {
+      "id": 17,
+      "text": "SDS模拟题17：我最近容易陷入自责情绪。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4,
+      "reverse": true
+    },
+    {
+      "id": 18,
+      "text": "SDS模拟题18：我会因小挫折而情绪下滑很久。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4,
+      "reverse": true
+    },
+    {
+      "id": 19,
+      "text": "SDS模拟题19：我总体上感到情绪较压抑。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 20,
+      "text": "SDS模拟题20：我感觉需要外部支持来调整状态。",
+      "dimension": "depression",
+      "weight": 1,
+      "min": 1,
+      "max": 4,
+      "reverse": true
+    }
+  ]
+}

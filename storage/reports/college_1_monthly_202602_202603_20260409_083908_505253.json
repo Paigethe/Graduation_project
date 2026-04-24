@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "college_id": 1,
+    "college_name": "计算机学院",
+    "month": null,
+    "month_start": "2026-02",
+    "month_end": "2026-03",
+    "period_label": "2026年02月 至 2026年03月",
+    "created_at": "2026-04-09T08:39:08.505253+00:00"
+  },
+  "summary": {
+    "metrics": [
+      "风险分布",
+      "预警趋势"
+    ],
+    "period": {
+      "month_start": "2026-02",
+      "month_end": "2026-03",
+      "label": "2026年02月 至 2026年03月",
+      "month_count": 2
+    },
+    "assessments": {
+      "count": 65,
+      "avg_score": 32.92,
+      "risk_distribution": {
+        "low": 34,
+        "medium": 18,
+        "high": 13,
+        "low_ratio": 52.31,
+        "medium_ratio": 27.69,
+        "high_ratio": 20.0
+      },
+      "top_dimensions": [
+        {
+          "key": "somatization",
+          "name": "躯体化",
+          "avg_score": 85.8,
+          "sample_count": 24
+        },
+        {
+          "key": "compulsive",
+          "name": "强迫症状",
+          "avg_score": 85.27,
+          "sample_count": 24
+        },
+        {
+          "key": "psychoticism",
+          "name": "精神病性",
+          "avg_score": 85.25,
+          "sample_count": 24
+        }
+      ]
+    },
+    "comparisons": {
+      "previous_period_label": "2025年12月 至 2026年01月",
+      "assessment_change_pct": 103.12,
+      "high_risk_change_pct": 225.0
+    },
+    "alerts": {
+      "count": 81,
+      "unack_count": 54,
+      "high_unack_count": 28,
+      "trend": {
+        "previous_period_label": "2025年12月 至 2026年01月",
+        "alert_change_pct": null,
+        "high_unack_change_pct": null
+      }
+    }
+  }
+}

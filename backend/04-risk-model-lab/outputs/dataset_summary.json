@@ -1,0 +1,56 @@
+{
+  "total_rows": 29102,
+  "columns": [
+    "source_dataset",
+    "source_row_id",
+    "age",
+    "gender",
+    "cgpa",
+    "academic_pressure",
+    "work_pressure",
+    "study_satisfaction",
+    "sleep_quality",
+    "dietary_habits",
+    "anxiety_signal",
+    "depression_signal",
+    "panic_signal",
+    "social_support",
+    "peer_pressure",
+    "financial_stress",
+    "family_history_mental_illness",
+    "suicidal_ideation",
+    "y_risk",
+    "y_risk_id"
+  ],
+  "label_distribution": {
+    "high": 16323,
+    "low": 11975,
+    "medium": 804
+  },
+  "split_sizes": {
+    "train": 20370,
+    "val": 4364,
+    "test": 4368
+  },
+  "source_stats": {
+    "adil_student_depression": {
+      "rows_raw": 27901,
+      "rows_built": 27901,
+      "columns_raw": 18
+    },
+    "stress_monitoring": {
+      "rows_raw": 1100,
+      "rows_built": 1100,
+      "columns_raw": 21
+    },
+    "student_mental_health_small": {
+      "rows_raw": 101,
+      "rows_built": 101,
+      "columns_raw": 11
+    }
+  },
+  "notes": [
+    "This unified dataset is intended for baseline risk classification.",
+    "It is not longitudinal ground-truth for future 1-2 month risk prediction."
+  ]
+}

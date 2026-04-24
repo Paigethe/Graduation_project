@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "college_id": 1,
+    "college_name": "计算机学院",
+    "month": null,
+    "month_start": "2026-03",
+    "month_end": "2026-08",
+    "period_label": "2026年03月 至 2026年08月",
+    "created_at": "2026-03-09T00:05:02.598823+00:00"
+  },
+  "summary": {
+    "metrics": [
+      "风险分布",
+      "干预效果",
+      "预警趋势",
+      "复测改善"
+    ],
+    "period": {
+      "month_start": "2026-03",
+      "month_end": "2026-08",
+      "label": "2026年03月 至 2026年08月",
+      "month_count": 6
+    },
+    "assessments": {
+      "count": 27,
+      "avg_score": 2.13,
+      "risk_distribution": {
+        "low": 18,
+        "medium": 9,
+        "high": 0,
+        "low_ratio": 66.67,
+        "medium_ratio": 33.33,
+        "high_ratio": 0.0
+      },
+      "top_dimensions": [
+        {
+          "key": "sleep",
+          "name": "睡眠",
+          "avg_score": 2.33,
+          "sample_count": 9
+        },
+        {
+          "key": "social",
+          "name": "social",
+          "avg_score": 2.33,
+          "sample_count": 9
+        },
+        {
+          "key": "somatic",
+          "name": "somatic",
+          "avg_score": 2.33,
+          "sample_count": 9
+        }
+      ]
+    },
+    "alerts": {
+      "count": 0,
+      "unack_count": 0,
+      "high_unack_count": 0
+    },
+    "interventions": {
+      "count": 0,
+      "by_status": {},
+      "done_count": 0,
+      "high_risk_student_count": 0,
+      "intervened_high_risk_student_count": 0,
+      "intervention_rate": 0.0,
+      "counselor_involved_count": 0,
+      "counselor_involved_rate": 0.0,
+      "feedback_status_distribution": {
+        "draft": 0,
+        "sent": 0,
+        "in_progress": 0,
+        "done": 0,
+        "no_intervention": 0
+      }
+    },
+    "questionnaires": {
+      "responses_count": 27,
+      "questionnaires_count": 4
+    },
+    "retest": {
+      "completed_task_count": 0,
+      "baseline_high_risk_count": 0,
+      "improved_count": 0,
+      "improved_to_safe_count": 0,
+      "improvement_rate": 0.0
+    },
+    "comparisons": {
+      "previous_period_label": "2025年09月 至 2026年02月",
+      "assessment_change_pct": -61.43,
+      "high_risk_change_pct": -100.0
+    }
+  }
+}

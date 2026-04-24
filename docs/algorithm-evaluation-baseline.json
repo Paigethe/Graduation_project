@@ -1,0 +1,10 @@
+{
+  "total": 281,
+  "accuracy": 1.0,
+  "by_level": {
+    "low": 168,
+    "medium": 84,
+    "high": 29
+  },
+  "note": "Baseline: risk_level vs predicted_risk_level (not expert labels)."
+}

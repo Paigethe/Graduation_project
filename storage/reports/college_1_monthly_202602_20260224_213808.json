@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "college_id": 1,
+    "month": "2026-02",
+    "created_at": "2026-02-24T21:38:08.659984+00:00"
+  },
+  "summary": {
+    "metrics": [
+      "风险分布",
+      "干预效果"
+    ],
+    "assessments": {
+      "count": 23,
+      "avg_score": 1.7285024154589375,
+      "risk_distribution": {
+        "low": 19,
+        "medium": 2,
+        "high": 2
+      }
+    },
+    "alerts": {
+      "count": 40,
+      "unack_count": 39,
+      "high_unack_count": 14
+    },
+    "interventions": {
+      "count": 34,
+      "by_status": {
+        "sent": 1,
+        "in_progress": 32,
+        "done": 1
+      },
+      "done_count": 1
+    },
+    "questionnaires": {
+      "responses_count": 23,
+      "questionnaires_count": 4
+    }
+  }
+}

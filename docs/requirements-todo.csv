@@ -1,0 +1,22 @@
+todo_id,requirement_id,category,task,status,priority,effort,dependencies,evidence,acceptance
+TODO-005,REQ-ALG-05/REQ-FUNC-08,功能,高风险AI对话自动转人工并通知对应咨询教师,done,P0,M,咨询分配关系/通知机制,backend/apps/chat/views.py,高风险触发自动创建人工会话并通知教师；前端显示转接提示；API/脚本可复现
+TODO-006,REQ-FUNC-09,功能,新增消息已读回执接口与前端展示（read_at写回）,done,P0,M,消息模型 read_at 字段,backend/apps/chat/models.py,消息 read_at 写回成功；前端显示已读状态；脚本可验证
+TODO-007,REQ-FUNC-09,功能,人工咨询实时方案（WebSocket或轮询）并验证延迟<=1s,partial,P0,L,TODO-006,frontend/src/pages/ChatPage.vue,消息延迟<=1s（WebSocket/轮询）；提供测量脚本/日志或截图
+TODO-008,REQ-FUNC-11,功能,学院问卷统计：提交率/未提交名单/得分分布接口+前端,done,P0,M,问卷统计查询,backend/apps/surveys/views.py,学院页可查看提交率/未提交名单/得分分布；接口返回对应数据；截图
+TODO-009,REQ-FUNC-10,功能,学院风险趋势（近3个月）统计与可视化,done,P1,M,时间序列聚合,frontend/src/pages/CollegeAnalysisPage.vue,近3个月风险趋势图可视化；支持筛选；截图
+TODO-010,REQ-FUNC-12,功能,月度报表PDF导出（后端生成+前端下载）,done,P1,M,PDF生成库/模板,backend/apps/reports/views.py,报表支持PDF下载；文件可打开；截图或样例留存
+TODO-011,REQ-FUNC-13,功能,备份定时任务/管理命令与文档说明,partial,P1,S,调度方案/cron,backend/apps/backups/views.py,按计划生成备份文件；日志可追溯；文档说明
+TODO-012,REQ-FUNC-15,功能,系统管理员全局全量备份（跨学院聚合导出）,done,P1,M,TODO-011,backend/apps/backups/views.py,全局备份覆盖全部学院；导出文件可核对；脚本可验证
+TODO-003,REQ-ALG-01,算法,补齐SCL-90/SAS/SDS结构化模拟题库并保留标准量表替换入口,partial,P0,M,量表题库版权处理,"docs/scales/README.md, docs/scripts/scale_csv_to_json.py, docs/scripts/generate_simulated_scales.py, docs/scales/scl90_simulated_full.json, docs/scales/sas_simulated_full.json, docs/scales/sds_simulated_full.json, backend/apps/surveys/management/commands/import_scale.py",结构化模拟量表可一键生成并导入；模板可用于流程联调；标准原题可在授权后替换导入
+TODO-001,REQ-ALG-02,算法,建立深度学习模型接口与推理管线，替换占位预测逻辑,partial,P0,L,TODO-003,backend/apps/assessments/services.py,predicted_risk_level 由模型输出并记录版本/阈值；推理接口可运行
+TODO-004,REQ-ALG-04/REQ-FUNC-08,算法,AI问答升级为DeepSeek模型+知识推荐（情绪/压力/人际/睡眠）,partial,P0,L,知识库/模型服务,"backend/apps/chat/utils.py, backend/apps/chat/knowledge.py, backend/apps/chat/views.py, frontend/src/pages/ChatPage.vue",AI回复来自DeepSeek模型并附知识推荐；高风险仍触发转人工；接口日志可验证
+TODO-002,REQ-ALG-03,算法,建立评估一致性与预测准确率评测流程并产出报告,partial,P0,L,TODO-001/TODO-003,"docs/algorithm-evaluation.md, backend/apps/assessments/management/commands/evaluate_predictions.py, docs/algorithm-evaluation-baseline.json, docs/algorithm-evaluation-template.csv",评测报告含一致性>=90%、预测准确率>=80%；附指标表/截图
+TODO-013,REQ-PERF-01,性能,性能测试脚本与报告：页面<=3s、提交/评估<=5s,partial,P0,L,性能测试工具/环境,无,性能报告含页面<=3s、提交/评估<=5s；附脚本与结果
+TODO-014,REQ-PERF-02/REQ-PERF-03,性能,并发与稳定性测试（>=1000并发/72h/99.9%）,partial,P0,L,TODO-013/压测环境,"docs/scripts/locustfile.py, docs/performance-test.md",并发>=1000与72h稳定性报告；可用性>=99.9%
+TODO-015,REQ-SEC-01,安全,权限隔离与越权访问测试用例及报告,partial,P0,M,角色测试账号/审计日志,backend/apps/accounts/permissions.py,越权访问测试全部失败并留痕；报告可追溯
+TODO-016,REQ-SEC-02,安全,敏感数据加密范围与备份访问控制策略补齐,partial,P0,M,密钥管理/加密方案,backend/apps/chat/utils.py,明确加密字段/密钥管理/备份访问控制；文档+验证
+TODO-017,REQ-TEST-01,测试,核心模块功能测试用例集（可手工或自动化）,partial,P1,M,测试账号/种子数据,docs/curl-smoke-tests.md,功能用例覆盖7大模块；走查记录+脚本可复现
+TODO-018,REQ-TEST-02,测试,性能/安全测试报告归档到 docs/,partial,P1,M,TODO-013/TODO-014/TODO-015/TODO-016,无,性能/安全测试报告归档 docs/；可追溯
+TODO-019,REQ-DOC-01,论文,论文正文补齐：需求/架构/技术选型/算法/模块/测试结果,partial,P1,L,系统实现与测试结果,无,论文正文结构符合任务书并包含测试结果与指标
+TODO-020,REQ-DOC-02,附录,补齐附录：架构图/模块图/ER/伪代码/关键代码片段,partial,P1,M,数据库与模块设计,无,附录图表齐全且可直接引用
+TODO-021,REQ-DOC-03,论文,补齐参考文献数量与外文占比,missing,P1,S,文献检索,01-毕业设计文档/任务书.docx,参考文献>=15且外文>=2；列表可核对

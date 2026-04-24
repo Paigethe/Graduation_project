@@ -1,0 +1,44 @@
+{
+  "model_name": "mlp_baseline",
+  "model_version": "mlp_baseline_20260224_180433",
+  "created_at_utc": "2026-02-24T18:04:44.919599+00:00",
+  "label_order": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "label_to_id": {
+    "low": 0,
+    "medium": 1,
+    "high": 2
+  },
+  "features": [
+    "age",
+    "cgpa",
+    "academic_pressure",
+    "work_pressure",
+    "study_satisfaction",
+    "sleep_quality",
+    "dietary_habits",
+    "anxiety_signal",
+    "depression_signal",
+    "panic_signal",
+    "social_support",
+    "peer_pressure",
+    "financial_stress",
+    "family_history_mental_illness",
+    "suicidal_ideation",
+    "gender"
+  ],
+  "notes": [
+    "Baseline classifier trained from public Kaggle merged dataset.",
+    "Use for engineering validation, not as final longitudinal evidence."
+  ],
+  "artifacts": {
+    "model": "/Users/xeanyu/Desktop/BS/001/04-risk-model-lab/outputs/training_runs/mlp_20260224_180433/model.joblib",
+    "metrics": "/Users/xeanyu/Desktop/BS/001/04-risk-model-lab/outputs/training_runs/mlp_20260224_180433/metrics.json",
+    "test_predictions": "/Users/xeanyu/Desktop/BS/001/04-risk-model-lab/outputs/training_runs/mlp_20260224_180433/test_predictions.csv",
+    "confusion_val": "/Users/xeanyu/Desktop/BS/001/04-risk-model-lab/outputs/training_runs/mlp_20260224_180433/confusion_val.csv",
+    "confusion_test": "/Users/xeanyu/Desktop/BS/001/04-risk-model-lab/outputs/training_runs/mlp_20260224_180433/confusion_test.csv"
+  }
+}

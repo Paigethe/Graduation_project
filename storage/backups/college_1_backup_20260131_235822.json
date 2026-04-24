@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "exported_at": "2026-01-31T23:58:22.735698+00:00",
+    "college_id": 1,
+    "counts": {
+      "students": 2,
+      "questionnaires": 1,
+      "responses": 1,
+      "assessments": 1,
+      "interventions": 1
+    }
+  },
+  "students": [
+    {
+      "id": 4,
+      "username": "student1",
+      "real_name": "学生甲",
+      "student_no": "S20260001",
+      "college_id": 1
+    },
+    {
+      "id": 5,
+      "username": "student2",
+      "real_name": "学生乙",
+      "student_no": "S20260002",
+      "college_id": 1
+    }
+  ],
+  "questionnaires": [
+    {
+      "id": 1,
+      "title": "心理健康自评（示例）",
+      "description": "面向计算机学院学生的示例问卷。",
+      "is_active": true,
+      "start_at": null,
+      "end_at": null,
+      "template_id": 1,
+      "target_college_id": 1,
+      "created_at": "2026-01-31T23:54:50.748Z"
+    }
+  ],
+  "responses": [
+    {
+      "id": 1,
+      "questionnaire_id": 1,
+      "student_id": 4,
+      "answers": {
+        "1": 4.0,
+        "2": 4.0,
+        "3": 3.0,
+        "4": 3.0,
+        "5": 4.0,
+        "6": 4.0,
+        "7": 3.0,
+        "8": 3.0,
+        "9": 2.0,
+        "10": 2.0
+      },
+      "submitted_at": "2026-01-31T23:55:33.566Z"
+    }
+  ],
+  "assessments": [
+    {
+      "id": 1,
+      "response_id": 1,
+      "total_score": 32.0,
+      "avg_score": 3.2,
+      "dimension_scores": {
+        "sleep": 4.0,
+        "social": 3.0,
+        "anxiety": 4.0,
+        "somatic": 2.0,
+        "depression": 3.0
+      },
+      "risk_level": "high",
+      "predicted_risk_level": "high",
+      "created_at": "2026-01-31T23:55:33.585Z"
+    }
+  ],
+  "interventions": [
+    {
+      "id": 1,
+      "student_id": 4,
+      "counselor_id": 3,
+      "assessment_id": null,
+      "title": "干预建议（示例）",
+      "content": "建议：规律作息 + 每日10分钟放松训练；必要时预约面谈。",
+      "status": "sent",
+      "created_at": "2026-01-31T23:55:51.824Z",
+      "updated_at": "2026-01-31T23:55:51.824Z"
+    }
+  ]
+}

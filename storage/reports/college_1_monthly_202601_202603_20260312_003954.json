@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "college_id": 1,
+    "college_name": "计算机学院",
+    "month": null,
+    "month_start": "2026-01",
+    "month_end": "2026-03",
+    "period_label": "2026年01月 至 2026年03月",
+    "created_at": "2026-03-12T00:39:54.572770+00:00"
+  },
+  "summary": {
+    "metrics": [
+      "风险分布",
+      "干预效果",
+      "预警趋势",
+      "复测改善"
+    ],
+    "period": {
+      "month_start": "2026-01",
+      "month_end": "2026-03",
+      "label": "2026年01月 至 2026年03月",
+      "month_count": 3
+    },
+    "assessments": {
+      "count": 97,
+      "avg_score": 22.84,
+      "risk_distribution": {
+        "low": 50,
+        "medium": 30,
+        "high": 17,
+        "low_ratio": 51.55,
+        "medium_ratio": 30.93,
+        "high_ratio": 17.53
+      },
+      "top_dimensions": [
+        {
+          "key": "somatization",
+          "name": "躯体化",
+          "avg_score": 65.01,
+          "sample_count": 32
+        },
+        {
+          "key": "compulsive",
+          "name": "强迫症状",
+          "avg_score": 64.61,
+          "sample_count": 32
+        },
+        {
+          "key": "psychoticism",
+          "name": "精神病性",
+          "avg_score": 64.59,
+          "sample_count": 32
+        }
+      ]
+    },
+    "alerts": {
+      "count": 81,
+      "unack_count": 54,
+      "high_unack_count": 28
+    },
+    "interventions": {
+      "count": 39,
+      "by_status": {
+        "sent": 1,
+        "in_progress": 34,
+        "done": 4
+      },
+      "done_count": 4,
+      "high_risk_student_count": 15,
+      "intervened_high_risk_student_count": 11,
+      "intervention_rate": 73.33,
+      "counselor_involved_count": 11,
+      "counselor_involved_rate": 73.33,
+      "feedback_status_distribution": {
+        "draft": 0,
+        "sent": 0,
+        "in_progress": 9,
+        "done": 2,
+        "no_intervention": 4
+      }
+    },
+    "questionnaires": {
+      "responses_count": 97,
+      "questionnaires_count": 4
+    },
+    "retest": {
+      "completed_task_count": 1,
+      "baseline_high_risk_count": 0,
+      "improved_count": 0,
+      "improved_to_safe_count": 0,
+      "improvement_rate": 0.0
+    },
+    "comparisons": {
+      "previous_period_label": "2025年10月 至 2025年12月",
+      "assessment_change_pct": null,
+      "high_risk_change_pct": null
+    }
+  }
+}

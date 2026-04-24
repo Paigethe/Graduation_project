@@ -1,0 +1,18 @@
+{
+  "exported_at_utc": "2026-02-24T18:10:01.755056+00:00",
+  "selection_metric": "test_macro_f1",
+  "best_run": {
+    "run_name": "mlp_20260224_180433",
+    "model": "mlp",
+    "train_rows": 20370,
+    "val_rows": 4364,
+    "test_rows": 4368,
+    "val_accuracy": 0.9942713107241063,
+    "val_macro_f1": 0.982540921670468,
+    "test_accuracy": 0.993360805860806,
+    "test_macro_f1": 0.9724492070342032,
+    "test_balanced_accuracy": 0.9594106780334944
+  },
+  "source_run_dir": "/Users/xeanyu/Desktop/BS/001/04-risk-model-lab/outputs/training_runs/mlp_20260224_180433",
+  "export_dir": "/Users/xeanyu/Desktop/BS/001/04-risk-model-lab/artifacts/best_model"
+}

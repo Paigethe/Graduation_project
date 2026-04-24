@@ -1,0 +1,17 @@
+{
+  "name": "SCL-90 示例（10题）",
+  "scale_type": "scl90_sample",
+  "description": "示例模板，题干需替换为标准量表内容。",
+  "questions": [
+    { "id": 1, "text": "示例题：最近我感到紧张不安。", "dimension": "anxiety", "weight": 1, "min": 1, "max": 5 },
+    { "id": 2, "text": "示例题：我很难放松下来。", "dimension": "anxiety", "weight": 1, "min": 1, "max": 5 },
+    { "id": 3, "text": "示例题：我对以前感兴趣的事提不起劲。", "dimension": "depression", "weight": 1, "min": 1, "max": 5 },
+    { "id": 4, "text": "示例题：我觉得做什么都很累。", "dimension": "depression", "weight": 1, "min": 1, "max": 5 },
+    { "id": 5, "text": "示例题：我最近睡眠质量不佳。", "dimension": "sleep", "weight": 1, "min": 1, "max": 5 },
+    { "id": 6, "text": "示例题：我经常难以入睡或易醒。", "dimension": "sleep", "weight": 1, "min": 1, "max": 5 },
+    { "id": 7, "text": "示例题：我在人际相处中感到压力。", "dimension": "social", "weight": 1, "min": 1, "max": 5 },
+    { "id": 8, "text": "示例题：我担心别人对我的看法。", "dimension": "social", "weight": 1, "min": 1, "max": 5 },
+    { "id": 9, "text": "示例题：我最近食欲变化明显。", "dimension": "somatic", "weight": 1, "min": 1, "max": 5 },
+    { "id": 10, "text": "示例题：我常感到身体不适但查不出原因。", "dimension": "somatic", "weight": 1, "min": 1, "max": 5 }
+  ]
+}

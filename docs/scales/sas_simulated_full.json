@@ -1,0 +1,172 @@
+{
+  "name": "SAS 结构化模拟量表（20题）",
+  "scale_type": "sas_sample",
+  "description": "结构化模拟题库（非版权原题），包含反向计分标记。",
+  "questions": [
+    {
+      "id": 1,
+      "text": "SAS模拟题01：我会无明显原因地感到紧张不安。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 2,
+      "text": "SAS模拟题02：我容易因为小事而心里发慌。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 3,
+      "text": "SAS模拟题03：我在安静时也会感到难以放松。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 4,
+      "text": "SAS模拟题04：我常担心不好的事情会发生在自己身上。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 5,
+      "text": "SAS模拟题05：我在学习任务前会过度紧张。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4,
+      "reverse": true
+    },
+    {
+      "id": 6,
+      "text": "SAS模拟题06：我会出现坐立不安、难以静下来的情况。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 7,
+      "text": "SAS模拟题07：我常觉得心跳加快或有紧迫感。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 8,
+      "text": "SAS模拟题08：我会因未来不确定而持续担忧。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 9,
+      "text": "SAS模拟题09：我容易因为他人评价而焦虑。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4,
+      "reverse": true
+    },
+    {
+      "id": 10,
+      "text": "SAS模拟题10：我在睡前常因担心而难以入睡。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 11,
+      "text": "SAS模拟题11：我经常感觉神经绷得很紧。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 12,
+      "text": "SAS模拟题12：我在压力下会明显烦躁。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 13,
+      "text": "SAS模拟题13：我会反复思考同一件担心的事。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4,
+      "reverse": true
+    },
+    {
+      "id": 14,
+      "text": "SAS模拟题14：我在公共场合容易紧张。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 15,
+      "text": "SAS模拟题15：我会因学习节奏而感到持续焦虑。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 16,
+      "text": "SAS模拟题16：我常担心自己表现不够好。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 17,
+      "text": "SAS模拟题17：我在突发变化面前容易慌乱。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4,
+      "reverse": true
+    },
+    {
+      "id": 18,
+      "text": "SAS模拟题18：我近期更容易疲惫且难以恢复。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    },
+    {
+      "id": 19,
+      "text": "SAS模拟题19：我会因焦虑影响专注力。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4,
+      "reverse": true
+    },
+    {
+      "id": 20,
+      "text": "SAS模拟题20：我总体上感觉焦虑程度较高。",
+      "dimension": "anxiety",
+      "weight": 1,
+      "min": 1,
+      "max": 4
+    }
+  ]
+}
