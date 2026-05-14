@@ -130,6 +130,8 @@ def create_assessment_for_response(response_obj: QuestionnaireResponse) -> Asses
 def ensure_dormant_high_risk_alerts() -> int:
     threshold_days = int(getattr(settings, "DORMANT_RISK_DAYS", 14) or 14)
     threshold = timezone.now() - timedelta(days=max(threshold_days, 1))
+    # 新注册用户豁免期（7天）
+    new_user_grace_period = timezone.now() - timedelta(days=7)
 
     latest_qs = AssessmentResult.objects.filter(
         response__student_id=OuterRef("pk")
@@ -146,6 +148,10 @@ def ensure_dormant_high_risk_alerts() -> int:
 
     created = 0
     for student in students:
+        # 跳过新注册用户（注册时间在7天内）
+        if hasattr(student, 'date_joined') and student.date_joined >= new_user_grace_period:
+            continue
+
         latest_risk_level = str(getattr(student, "_latest_risk", "") or "")
         latest_pred_level = str(getattr(student, "_latest_pred", "") or "")
         if latest_risk_level != AssessmentResult.RiskLevel.HIGH and latest_pred_level != AssessmentResult.RiskLevel.HIGH:

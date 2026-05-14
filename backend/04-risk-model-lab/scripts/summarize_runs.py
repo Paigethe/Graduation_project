@@ -6,7 +6,9 @@ import json
 from pathlib import Path
 
 import pandas as pd
-
+# （实验结果汇总）：
+# 用于在多次模型训练（跑了不同的算法或参数）后，读取并汇总所有存放在 outputs/training_runs/ 下的训练日志和性能指标（metrics），
+# 方便开发者直观地对比哪次实验的效果最好。
 
 def main():
     parser = argparse.ArgumentParser(description="Summarize training run metrics into a single table.")

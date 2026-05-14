@@ -8,8 +8,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
-
-
+# 最优模型导出交付）：
+# 它是连接“实验室”与“真实业务”的桥梁。负责将综合评估表现最好的模型通过 joblib 库进行序列化打包导出，
+# 同时生成包含模型版本等信息的元数据文件（model_meta.json），最终输出到 artifacts/best_model/ 目录下，供 Django 后端线上系统（predictor.py）直接加载调用。
 def main():
     parser = argparse.ArgumentParser(description="Select and export the best training run.")
     parser.add_argument(

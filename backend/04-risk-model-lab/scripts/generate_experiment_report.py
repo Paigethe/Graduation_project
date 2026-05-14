@@ -8,7 +8,8 @@ from pathlib import Path
 
 import pandas as pd
 
-
+# （自动生成实验报告）：
+# 基于汇总的指标数据，自动化地生成 Markdown 格式的实验分析报告（会输出到 outputs/reports/ 目录下），详细记录基线模型与核心模型的对比表现。
 SUPPORTED_METRICS = ["test_macro_f1", "test_accuracy", "test_balanced_accuracy"]
 
 

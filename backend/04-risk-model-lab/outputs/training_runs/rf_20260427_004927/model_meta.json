@@ -1,0 +1,44 @@
+{
+  "model_name": "rf_baseline",
+  "model_version": "rf_baseline_20260427_004927",
+  "created_at_utc": "2026-04-27T00:49:30.778334+00:00",
+  "label_order": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "label_to_id": {
+    "low": 0,
+    "medium": 1,
+    "high": 2
+  },
+  "features": [
+    "age",
+    "cgpa",
+    "academic_pressure",
+    "work_pressure",
+    "study_satisfaction",
+    "sleep_quality",
+    "dietary_habits",
+    "anxiety_signal",
+    "depression_signal",
+    "panic_signal",
+    "social_support",
+    "peer_pressure",
+    "financial_stress",
+    "family_history_mental_illness",
+    "suicidal_ideation",
+    "gender"
+  ],
+  "notes": [
+    "Baseline classifier trained from public Kaggle merged dataset.",
+    "Use for engineering validation, not as final longitudinal evidence."
+  ],
+  "artifacts": {
+    "model": "C:\\Users\\lenovo\\Desktop\\project2\\backend\\04-risk-model-lab\\outputs\\training_runs\\rf_20260427_004927\\model.joblib",
+    "metrics": "C:\\Users\\lenovo\\Desktop\\project2\\backend\\04-risk-model-lab\\outputs\\training_runs\\rf_20260427_004927\\metrics.json",
+    "test_predictions": "C:\\Users\\lenovo\\Desktop\\project2\\backend\\04-risk-model-lab\\outputs\\training_runs\\rf_20260427_004927\\test_predictions.csv",
+    "confusion_val": "C:\\Users\\lenovo\\Desktop\\project2\\backend\\04-risk-model-lab\\outputs\\training_runs\\rf_20260427_004927\\confusion_val.csv",
+    "confusion_test": "C:\\Users\\lenovo\\Desktop\\project2\\backend\\04-risk-model-lab\\outputs\\training_runs\\rf_20260427_004927\\confusion_test.csv"
+  }
+}

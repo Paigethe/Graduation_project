@@ -13,9 +13,9 @@ logger = logging.getLogger(__name__)
 
 
 # OpenAI-compatible model endpoint settings.
-AI_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "").strip()
-AI_BASE_URL = os.environ.get("DEEPSEEK_BASE_URL", "https://media.apiport.cc.cd/v1").strip()
-AI_MODEL = os.environ.get("DEEPSEEK_MODEL", "grok-4.1-fast").strip()
+AI_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "sk-48934fc336034fd3953c22c55a248204").strip()
+AI_BASE_URL = os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com").strip()
+AI_MODEL = os.environ.get("DEEPSEEK_MODEL", "deepseek-v4-flash").strip()
 
 HIGH_RISK_KEYWORDS = [
     "自杀",

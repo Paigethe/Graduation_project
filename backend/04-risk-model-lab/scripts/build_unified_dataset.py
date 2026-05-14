@@ -9,7 +9,10 @@ from typing import Callable
 
 import pandas as pd
 import requests
-
+# 数据预处理与特征工程
+# 负责读取多个异构的原始公开数据集（如 adil_student_depression.csv 等），进行统一字段映射。
+# 它执行标准化、类别编码、中位数填充缺失值等操作，最终提取出年龄、睡眠质量、焦虑信号等 18 项核心建模特征，
+# 并将数据规范地划分为训练集、验证集和测试集供后续使用
 
 @dataclass(frozen=True)
 class DatasetSpec:

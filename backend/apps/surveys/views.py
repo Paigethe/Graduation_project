@@ -28,7 +28,7 @@ from .serializers import (
 
 User = get_user_model()
 
-
+#这是问卷模板视图集
 class QuestionnaireTemplateViewSet(
     mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, viewsets.GenericViewSet
 ):

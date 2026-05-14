@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { onMounted, reactive, ref } from 'vue'
+import { onMounted, reactive, ref, watch } from 'vue'
 import { ElButton, ElForm, ElFormItem, ElInput, ElMessage, ElSelect, ElTabPane, ElTabs } from 'element-plus'
 
 import { api } from '../api/client'
-import type { College } from '../api/types'
+import type { College, MajorLite, ClassGroupLite } from '../api/types'
 import { useAuthStore } from '../stores/auth'
 import LucideIcon from '../components/LucideIcon.vue'
 
@@ -13,6 +13,8 @@ const authTab = ref<'login' | 'register'>('login')
 const loading = ref(false)
 
 const colleges = ref<College[]>([])
+const majors = ref<MajorLite[]>([])
+const classGroups = ref<ClassGroupLite[]>([])
 
 const loginForm = reactive({
   username: 'student1',
@@ -23,6 +25,8 @@ const registerForm = reactive({
   username: '',
   real_name: '',
   college_id: undefined as number | undefined,
+  major_id: undefined as number | undefined,
+  class_group_id: undefined as number | undefined,
   password: '',
   password2: '',
 })
@@ -33,6 +37,32 @@ async function loadColleges() {
     colleges.value = data.results ?? data ?? []
   } catch {
     colleges.value = []
+  }
+}
+
+async function loadMajors(collegeId?: number) {
+  if (!collegeId) {
+    majors.value = []
+    return
+  }
+  try {
+    const { data } = await api.get('/api/majors/', { params: { college_id: collegeId } })
+    majors.value = data.results ?? data ?? []
+  } catch {
+    majors.value = []
+  }
+}
+
+async function loadClassGroups(majorId?: number) {
+  if (!majorId) {
+    classGroups.value = []
+    return
+  }
+  try {
+    const { data } = await api.get('/api/classes/', { params: { major_id: majorId } })
+    classGroups.value = data.results ?? data ?? []
+  } catch {
+    classGroups.value = []
   }
 }
 
@@ -51,6 +81,8 @@ async function handleRegister() {
   if (!registerForm.username.trim()) return ElMessage.warning('请填写账号/学号')
   if (!registerForm.real_name.trim()) return ElMessage.warning('请填写真实姓名')
   if (!registerForm.college_id) return ElMessage.warning('请选择二级学院')
+  if (!registerForm.major_id) return ElMessage.warning('请选择专业')
+  if (!registerForm.class_group_id) return ElMessage.warning('请选择班级')
   if (!registerForm.password) return ElMessage.warning('请设置密码')
   if (registerForm.password !== registerForm.password2) return ElMessage.warning('两次密码不一致')
 
@@ -60,6 +92,8 @@ async function handleRegister() {
       username: registerForm.username.trim(),
       real_name: registerForm.real_name.trim(),
       college_id: registerForm.college_id,
+      major_id: registerForm.major_id,
+      class_group_id: registerForm.class_group_id,
       password: registerForm.password,
     })
     ElMessage.success('注册成功，请登录')
@@ -69,6 +103,8 @@ async function handleRegister() {
     registerForm.username = ''
     registerForm.real_name = ''
     registerForm.college_id = undefined
+    registerForm.major_id = undefined
+    registerForm.class_group_id = undefined
     registerForm.password = ''
     registerForm.password2 = ''
   } catch (err: any) {
@@ -83,6 +119,17 @@ async function handleRegister() {
 }
 
 onMounted(loadColleges)
+
+watch(() => registerForm.college_id, (newCollegeId) => {
+  registerForm.major_id = undefined
+  registerForm.class_group_id = undefined
+  loadMajors(newCollegeId)
+})
+
+watch(() => registerForm.major_id, (newMajorId) => {
+  registerForm.class_group_id = undefined
+  loadClassGroups(newMajorId)
+})
 </script>
 
 <template>
@@ -109,10 +156,6 @@ onMounted(loadColleges)
                 登 录
               </ElButton>
             </ElForm>
-
-            <!-- <div class="mt-4 text-xs text-slate-400">
-              演示账号：<span class="font-mono">student1 / 123456</span>（其它角色见 `docs/seed-data.md`）
-            </div> -->
           </ElTabPane>
 
           <ElTabPane label="学生注册" name="register">
@@ -126,6 +169,16 @@ onMounted(loadColleges)
               <ElFormItem label="所属二级学院">
                 <ElSelect v-model="registerForm.college_id" placeholder="请选择学院" class="w-full" filterable>
                   <el-option v-for="c in colleges" :key="c.id" :label="c.name" :value="c.id" />
+                </ElSelect>
+              </ElFormItem>
+              <ElFormItem label="专业">
+                <ElSelect v-model="registerForm.major_id" placeholder="请选择专业" class="w-full" filterable>
+                  <el-option v-for="m in majors" :key="m.id" :label="m.name" :value="m.id" />
+                </ElSelect>
+              </ElFormItem>
+              <ElFormItem label="班级">
+                <ElSelect v-model="registerForm.class_group_id" placeholder="请选择班级" class="w-full" filterable>
+                  <el-option v-for="c in classGroups" :key="c.id" :label="c.name" :value="c.id" />
                 </ElSelect>
               </ElFormItem>
               <ElFormItem label="设置密码">

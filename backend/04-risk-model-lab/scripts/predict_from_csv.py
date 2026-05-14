@@ -6,7 +6,9 @@ from pathlib import Path
 
 import joblib
 import pandas as pd
-
+# （离线批量预测工具）：
+# 一个便捷的测试脚本。允许你不启动 Django 后端，直接读取本地包含学生特征的 CSV 文件，加载导出的模型进行批量风险预测，
+# 主要用于离线验证模型的推理效果是否符合预期
 
 def main():
     parser = argparse.ArgumentParser(description="Run inference on CSV with a trained baseline model.")

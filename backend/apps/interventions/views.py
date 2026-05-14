@@ -10,7 +10,7 @@ from .models import InterventionPlan
 from .serializers import InterventionPlanCreateSerializer, InterventionPlanSerializer
 
 User = get_user_model()
-
+#这是干预计划视图集
 
 class InterventionPlanViewSet(
     mixins.ListModelMixin,

@@ -1,7 +1,10 @@
 from django.conf import settings
 from django.db import models
 
-
+#本文件定义了两个模型：AssessmentResult和RiskAlert。
+# AssessmentResult模型用于存储评估结果，包括总分、平均分、各维度分数、风险等级等信息。
+# RiskAlert模型用于存储风险预警信息，包括学生、评估结果、预警等级、消息内容等。这些模型通过Django的ORM系统与数据库进行交互，
+# 允许我们方便地创建、查询和管理评估结果和风险预警数据。
 class AssessmentResult(models.Model):
     class RiskLevel(models.TextChoices):
         LOW = "low", "低风险"

@@ -4,6 +4,14 @@ import vue from '@vitejs/plugin-vue'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://127.0.0.1:52517',
+        changeOrigin: true,
+      },
+    },
+  },
   optimizeDeps: {
     // Work around Node 23 + esbuild prebundle issue on lodash-es in dev mode.
     exclude: ['lodash-es'],
@@ -27,13 +35,6 @@ export default defineConfig({
           return 'vendor'
         },
       },
-    },
-  },
-  server: {
-    port: 52516,
-    strictPort: true,
-    proxy: {
-      '/api': 'http://127.0.0.1:52517',
     },
   },
 })

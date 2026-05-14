@@ -2,8 +2,8 @@ from django.conf import settings
 from django.db import models
 
 from apps.accounts.models import College
-
-
+#这是问卷模板模型
+#QuestionnaireTemplate用于创建和管理问卷模板
 class QuestionnaireTemplate(models.Model):
     class ScaleType(models.TextChoices):
         SCL90_SAMPLE = "scl90_sample", "SCL-90（示例）"
@@ -25,7 +25,7 @@ class QuestionnaireTemplate(models.Model):
     def __str__(self) -> str:
         return self.name
 
-
+#这是问卷模型
 class Questionnaire(models.Model):
     template = models.ForeignKey(QuestionnaireTemplate, on_delete=models.PROTECT)
     title = models.CharField(max_length=120)
@@ -45,7 +45,7 @@ class Questionnaire(models.Model):
     def __str__(self) -> str:
         return self.title
 
-
+#这是问卷作答模型
 class QuestionnaireResponse(models.Model):
     questionnaire = models.ForeignKey(Questionnaire, on_delete=models.CASCADE, related_name="responses")
     student = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="questionnaire_responses")
@@ -57,7 +57,7 @@ class QuestionnaireResponse(models.Model):
         verbose_name_plural = "问卷作答"
         ordering = ["-id"]
 
-
+#这是问卷复测任务模型
 class QuestionnaireRetestTask(models.Model):
     class Status(models.TextChoices):
         PENDING = "pending", "待完成"

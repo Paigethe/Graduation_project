@@ -89,7 +89,7 @@ class MajorViewSet(
     def get_permissions(self):
         if self.action == "create":
             return [IsAuthenticated(), IsSysAdmin()]
-        return super().get_permissions()
+        return [AllowAny()]  # Allow unauthenticated users to list majors for registration
 # get_queryset 方法根据请求的查询参数过滤专业列表，
 # 如果请求中包含 college_id 参数，则过滤出属于该学院的专业；
 # 如果请求中包含 major_id 参数，则过滤出属于该专业的专业。
@@ -122,7 +122,7 @@ class ClassGroupViewSet(
     def get_permissions(self):
         if self.action == "create":
             return [IsAuthenticated(), IsSysAdmin()]
-        return super().get_permissions()
+        return [AllowAny()]  # Allow unauthenticated users to list classes for registration
 
     def get_queryset(self):
         qs = super().get_queryset()

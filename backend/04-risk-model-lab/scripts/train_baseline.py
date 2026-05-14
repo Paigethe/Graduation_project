@@ -23,6 +23,9 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import StandardScaler
+# 模型训练与评估
+# 负责加载处理好的数据集，并同时训练多种机器学习模型。
+# 在你的系统中，它训练了多层感知机（MLP，核心模型）、随机森林和逻辑回归（作为基线对比模型），并计算准确率、宏平均F1分数、混淆矩阵等各项评估指标
 
 
 LABEL_ORDER = ["low", "medium", "high"]
@@ -160,7 +163,7 @@ def main():
     y_val = val_df["y_risk"].astype(str)
     x_test = test_df[feature_cols]
     y_test = test_df["y_risk"].astype(str)
-
+# 数值特征缩放条件
     scale_numeric = args.model in {"logreg", "mlp"}
     preprocessor = make_preprocessor(num_cols, cat_cols, scale_numeric=scale_numeric)
     estimator = model_factory(args.model, args.seed)
